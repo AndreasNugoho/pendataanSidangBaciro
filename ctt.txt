@@ -1,0 +1,18 @@
+                <div class="mb-3 mx-auto w-50" >
+                    <select class="form-control" name="status" id="status" default="<?= $data["status"]?>">
+                    <?php
+                        if ($data["status"] == NULL){?>
+                            <option value="">- Pilih Status -</option>
+                            <option value="Aktif"<?php if ($data == "aktif") echo "selected" ?>>Aktif</option>
+                            <option value="Tidak Aktif"<?php if ($data == "tidak aktif") echo "selected" ?>>Tidak Aktif </option> 
+                        <?php } if ($data["status"] == 'aktif'){?>
+                            <option value="Aktif"<?php if ($data == "aktif") echo "selected" ?>>Aktif</option>
+                            <option value="Tidak Aktif"<?php if ($data == "tidak aktif") echo "selected" ?>>Tidak Aktif </option> 
+                        <?php }if ($data["status"] == 'tidak aktif'){?>
+                            <option value="Tidak Aktif"<?php if ($data == "tidak aktif") echo "selected" ?>>Tidak Aktif </option> 
+                            <option value="Aktif"<?php if ($data == "aktif") echo "selected" ?>>Aktif</option>
+                        <?php } ?>   
+                    <select>
+                </div>   
+
+                document.location.href = 'index.php';
